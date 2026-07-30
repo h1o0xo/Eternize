@@ -7,7 +7,7 @@
  */
 
 const SIGILOPAY_ENDPOINT = 'https://app.sigilopay.com.br/api/v1/gateway/pix/receive';
-const UNIT_PRICE = 25.90;
+const UNIT_PRICE = 25.00;
 
 // ── Produto ───────────────────────────────────────────────────────────────────
 const PRODUCT_ID   = 'colar-eternize-personalizado';
@@ -52,7 +52,7 @@ export default async function handler(req, res) {
     email,
     phone,
     document,
-    photoName     = '',
+    photoName      = '',
     engravedName  = '',
     engravedPhrase = '',
   } = req.body || {};
@@ -91,10 +91,10 @@ export default async function handler(req, res) {
     client: { name, email, phone, document },
     products: [
       {
-        id:       PRODUCT_ID,
-        name:     PRODUCT_NAME,
+        id:        PRODUCT_ID,
+        name:      PRODUCT_NAME,
         quantity,
-        price:    UNIT_PRICE,
+        price:     UNIT_PRICE,
       },
     ],
     callbackUrl,
@@ -139,6 +139,10 @@ export default async function handler(req, res) {
     });
   }
 
+  const pixCode = data.pix?.code || null;
+  // Se o gateway não mandar a imagem pronta, geramos automaticamente via API pública de QR Code usando o copia e cola
+  const pixImage = data.pix?.image || (pixCode ? `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(pixCode)}` : null);
+
   // Return only what the frontend needs
   return res.status(200).json({
     transactionId: data.transactionId,
@@ -146,8 +150,8 @@ export default async function handler(req, res) {
     identifier,
     amount,
     pix: {
-      code:  data.pix?.code  || null,
-      image: data.pix?.image || null,
+      code:  pixCode,
+      image: pixImage,
     },
   });
 }
