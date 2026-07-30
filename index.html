@@ -2660,16 +2660,24 @@ async function submitOrder() {
       return;
     }
 
-    // Show PIX corrigido
+    // Show PIX direto e definitivo
     const qrImg = document.getElementById('pix-qr-img');
     const qrPh = document.getElementById('pix-qr-placeholder');
     
-    if (data.pix?.image) {
-      qrImg.src = data.pix.image;
+    const pixCode = data.pix?.code;
+
+    if (pixCode) {
+      // Gera a imagem do QR Code instantaneamente direto no navegador usando o link público oficial
+      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(pixCode)}`;
       qrImg.style.display = 'block';
       if (qrPh) qrPh.style.display = 'none';
+
+      document.getElementById('pix-code').textContent = pixCode;
+      goToStep('pix');
     } else {
-      if (qrPh) qrPh.textContent = 'QR Code indisponível — use o código abaixo';
+      if (qrPh) qrPh.textContent = 'Erro ao carregar QR Code';
+      document.getElementById('pix-code').textContent = 'Erro ao gerar código Pix';
+      goToStep('pix');
     }
 
     document.getElementById('pix-code').textContent = data.pix?.code || '-';
