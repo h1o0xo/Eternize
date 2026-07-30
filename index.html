@@ -1198,6 +1198,12 @@
     /* m-row */
     .m-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     @media (max-width: 400px) { .m-row { grid-template-columns: 1fr; } }
+    .addr-heading {
+      font-size: 12px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 1px; color: var(--gold);
+      margin: 6px 0 14px; padding-top: 4px;
+      border-top: 1px solid var(--border);
+    }
 
     /* ─── BLINK ─── */
     @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }
@@ -1928,6 +1934,51 @@
             <div class="m-field-error">Número inválido.</div>
           </div>
 
+          <!-- ─── Address ─── -->
+          <div class="addr-heading">Endereço de entrega</div>
+
+          <div class="m-row">
+            <div class="m-field" id="field-cep" style="flex:0 0 170px;">
+              <label class="m-label" for="inp-cep">CEP *</label>
+              <input class="m-input" id="inp-cep" type="text" placeholder="00000-000" maxlength="9" inputmode="numeric" autocomplete="postal-code">
+              <div class="m-field-error">CEP inválido.</div>
+            </div>
+            <div class="m-field" id="field-street" style="flex:1;">
+              <label class="m-label" for="inp-street">Logradouro *</label>
+              <input class="m-input" id="inp-street" type="text" placeholder="Rua, Avenida..." autocomplete="street-address">
+              <div class="m-field-error">Informe o logradouro.</div>
+            </div>
+          </div>
+          <div class="m-row">
+            <div class="m-field" id="field-number" style="flex:0 0 120px;">
+              <label class="m-label" for="inp-number">Número *</label>
+              <input class="m-input" id="inp-number" type="text" placeholder="Nº" autocomplete="address-line2">
+              <div class="m-field-error">Informe o número.</div>
+            </div>
+            <div class="m-field" id="field-complement" style="flex:1;">
+              <label class="m-label" for="inp-complement">Complemento</label>
+              <input class="m-input" id="inp-complement" type="text" placeholder="Apto, Bloco..." autocomplete="address-line2">
+            </div>
+          </div>
+          <div class="m-row">
+            <div class="m-field" id="field-neighborhood" style="flex:1;">
+              <label class="m-label" for="inp-neighborhood">Bairro *</label>
+              <input class="m-input" id="inp-neighborhood" type="text" placeholder="Seu bairro">
+              <div class="m-field-error">Informe o bairro.</div>
+            </div>
+            <div class="m-field" id="field-city" style="flex:2;">
+              <label class="m-label" for="inp-city">Cidade *</label>
+              <input class="m-input" id="inp-city" type="text" placeholder="Sua cidade" autocomplete="address-level2">
+              <div class="m-field-error">Informe a cidade.</div>
+            </div>
+            <div class="m-field" id="field-state" style="flex:0 0 70px;">
+              <label class="m-label" for="inp-state">UF *</label>
+              <input class="m-input" id="inp-state" type="text" placeholder="UF" maxlength="2" style="text-transform:uppercase;text-align:center;" autocomplete="address-level1">
+              <div class="m-field-error">UF inválida.</div>
+            </div>
+          </div>
+          <!-- ─── /Address ─── -->
+
           <div class="btn-row" style="margin-top:8px;">
             <button class="btn-back" onclick="goToStep(2)">
               <svg class="svg-icon" style="width:16px;height:16px" aria-hidden="true"><use href="#i-arrow-l"/></svg>
@@ -2435,6 +2486,51 @@ document.getElementById('inp-cpf').addEventListener('input', (e) => {
   e.target.value = v;
 });
 
+/* ─────────────────────── CEP MASK + AUTO-FILL ─────────────────────── */
+document.getElementById('inp-cep').addEventListener('input', (e) => {
+  let v = e.target.value.replace(/\D/g,'');
+  if (v.length > 8) v = v.slice(0,8);
+  if (v.length >= 5) v = v.replace(/(\d{5})(\d{0,3})/,'$1-$2');
+  e.target.value = v;
+
+  if (v.replace(/\D/g,'').length === 8) {
+    searchCep(v.replace(/\D/g,''));
+  }
+});
+
+async function searchCep(cep) {
+  const cepField = document.getElementById('field-cep');
+  const street   = document.getElementById('inp-street');
+  const nb       = document.getElementById('inp-neighborhood');
+  const city     = document.getElementById('inp-city');
+  const state    = document.getElementById('inp-state');
+  const oldBg    = cepField.style.background;
+
+  // Mark as loading
+  cepField.style.opacity = '0.5';
+
+  try {
+    const res = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+    const data = await res.json();
+
+    if (data.erro) {
+      cepField.classList.add('has-error');
+      return;
+    }
+
+    cepField.classList.remove('has-error');
+    street.value    = data.logradouro || '';
+    nb.value        = data.bairro || '';
+    city.value      = data.localidade || '';
+    state.value     = data.uf || '';
+  } catch {
+    // ViaCEP offline — fields stay empty, user fills manually
+  } finally {
+    cepField.style.opacity = '1';
+  }
+}
+/* ─────────────────────── /CEP ─────────────────────── */
+
 document.getElementById('inp-phone').addEventListener('input', (e) => {
   let v = e.target.value.replace(/\D/g,'');
   if (v.length > 11) v = v.slice(0,11);
@@ -2469,6 +2565,38 @@ function validateForm() {
   phF.classList.toggle('has-error', phone.length < 10);
   if (phone.length < 10) ok = false;
 
+  // Address validation
+  const cep    = document.getElementById('inp-cep').value.replace(/\D/g,'');
+  const cepF   = document.getElementById('field-cep');
+  cepF.classList.toggle('has-error', cep.length !== 8);
+  if (cep.length !== 8) ok = false;
+
+  const street   = document.getElementById('inp-street').value.trim();
+  const stF      = document.getElementById('field-street');
+  stF.classList.toggle('has-error', !street);
+  if (!street) ok = false;
+
+  const number   = document.getElementById('inp-number').value.trim();
+  const numF     = document.getElementById('field-number');
+  numF.classList.toggle('has-error', !number);
+  if (!number) ok = false;
+
+  const neighbor = document.getElementById('inp-neighborhood').value.trim();
+  const nbF      = document.getElementById('field-neighborhood');
+  nbF.classList.toggle('has-error', !neighbor);
+  if (!neighbor) ok = false;
+
+  const city     = document.getElementById('inp-city').value.trim();
+  const cidF     = document.getElementById('field-city');
+  cidF.classList.toggle('has-error', !city);
+  if (!city) ok = false;
+
+  const state    = document.getElementById('inp-state').value.trim().toUpperCase();
+  const estF     = document.getElementById('field-state');
+  const stateOk  = /^[A-Z]{2}$/.test(state);
+  estF.classList.toggle('has-error', !stateOk);
+  if (!stateOk) ok = false;
+
   return ok;
 }
 
@@ -2483,6 +2611,13 @@ async function submitOrder() {
   const phone     = document.getElementById('inp-phone').value.replace(/\D/g,'');
   const engName   = document.getElementById('input-name').value.trim();
   const engPhrase = document.getElementById('input-phrase').value.trim();
+  const cep       = document.getElementById('inp-cep').value.replace(/\D/g,'');
+  const street    = document.getElementById('inp-street').value.trim();
+  const number    = document.getElementById('inp-number').value.trim();
+  const complement = document.getElementById('inp-complement').value.trim();
+  const neighbor  = document.getElementById('inp-neighborhood').value.trim();
+  const city      = document.getElementById('inp-city').value.trim();
+  const state     = document.getElementById('inp-state').value.trim().toUpperCase();
 
   goToStep('loading');
 
@@ -2499,6 +2634,15 @@ async function submitOrder() {
         engravedName:   engName,
         engravedPhrase: engPhrase,
         material:       currentMaterial,
+        address: {
+          cep,
+          street,
+          number,
+          complement,
+          neighborhood:  neighbor,
+          city,
+          state,
+        },
       }),
     });
 
