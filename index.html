@@ -2660,19 +2660,25 @@ async function submitOrder() {
       return;
     }
 
-    // Show PIX
+    // Show PIX atualizado com gerador automático
     const qrImg = document.getElementById('pix-qr-img');
-    const qrPh  = document.getElementById('pix-qr-placeholder');
-    if (data.pix?.image) {
-      qrImg.src = data.pix.image.startsWith('data:') ? data.pix.image : `data:image/png;base64,${data.pix.image}`;
-      qrImg.style.display = 'block';
-      qrPh.style.display  = 'none';
-    } else {
-      qrPh.textContent = 'QR Code indisponível — use o código abaixo';
-    }
+    const qrPh = document.getElementById('pix-qr-placeholder');
+    
+    const pixCode = data.pix?.code;
 
-    document.getElementById('pix-code').textContent = data.pix?.code || '—';
-    goToStep('pix');
+    if (pixCode) {
+      // Usa a API pública para desenhar o QR Code perfeitamente usando o Copia e Cola
+      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(pixCode)}`;
+      qrImg.style.display = 'block';
+      if (qrPh) qrPh.style.display = 'none';
+
+      document.getElementById('pix-code').textContent = pixCode;
+      goToStep('pix');
+    } else {
+      if (qrPh) qrPh.textContent = 'Erro ao carregar QR Code — use o código abaixo';
+      document.getElementById('pix-code').textContent = 'Erro ao gerar código Pix';
+      goToStep('pix');
+    }
 
   } catch (err) {
     console.error('[submit]', err);
