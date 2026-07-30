@@ -1,0 +1,2592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ═══ SEO ═══ -->
+  <title>Eternize — Colar Personalizado com Foto e Nome Gravado | Presente Único</title>
+  <meta name="description" content="Colar personalizado em aço inoxidável dourado ou prata, com sua foto impressa na frente e nome ou frase gravada a laser nas costas. Presente único e emocionante, com frete grátis para todo o Brasil.">
+  <meta name="keywords" content="colar personalizado, colar com foto, colar gravado, presente personalizado, colar nome gravado, joia personalizada, colar Eternize">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Eternize">
+  <meta name="theme-color" content="#04193d">
+  <!-- Quando tiver o domínio definitivo, adicione aqui:
+       <link rel="canonical" href="https://SEUDOMINIO.com.br/">
+       e troque as URLs relativas de og:image/twitter:image/JSON-LD abaixo por absolutas. -->
+
+
+  <!-- ═══ FAVICON (aparece ao lado do link nos resultados do Google) ═══ -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <!-- ═══ OPEN GRAPH / SOCIAL ═══ -->
+  <meta property="og:title"       content="Eternize — Colar Personalizado com Foto e Nome Gravado">
+  <meta property="og:description" content="Cada peça é única. Cada peça é sua. Foto impressa + nome gravado a laser em aço inoxidável dourado ou prata. Frete grátis para todo o Brasil.">
+  <meta property="og:image"       content="assets/produto-1.jpg">
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="pt_BR">
+  <meta property="og:site_name"   content="Eternize">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Eternize — Colar Personalizado com Foto e Nome Gravado">
+  <meta name="twitter:description" content="Sua foto na frente, seu nome gravado nas costas. Presente que fica para sempre. Frete grátis para todo o Brasil.">
+  <meta name="twitter:image"       content="assets/produto-1.jpg">
+
+  <!-- ═══ DADOS ESTRUTURADOS (Google Rich Results) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "Colar Personalizado Eternize",
+    "image": [
+      "assets/produto-1.jpg",
+      "assets/produto-2.jpg"
+    ],
+    "description": "Colar em aço inoxidável dourado ou prata com foto impressa na frente e nome ou frase gravada a laser nas costas.",
+    "brand": { "@type": "Brand", "name": "Eternize" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "BRL",
+      "price": "109.90",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════════
+       DESIGN TOKENS
+    ═══════════════════════════════════════════════ */
+    :root {
+      --blue-deep:   #04193d;
+      --blue-mid:    #0b2f72;
+      --blue-light:  #1a4a9f;
+      --gold:        #C8900A;
+      --gold-light:  #F5B800;
+      --gold-pale:   #FFE07A;
+      --white:       #FFFFFF;
+      --muted:       #9ab0d4;
+      --border:      rgba(200,144,10,.22);
+      --border-s:    rgba(200,144,10,.5);
+      --green:       #25D366;
+      --green-dark:  #1da855;
+      --red:         #e53e3e;
+      --radius:      10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--blue-deep);
+      color: var(--white);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    img, svg { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: inherit; border: none; outline: none; }
+
+    /* ─── SVG UTILS ─── */
+    .svg-icon { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .svg-icon svg { width: 100%; height: 100%; }
+
+    /* ═══════════════════════════════════════════════
+       ANNOUNCE BAR
+    ═══════════════════════════════════════════════ */
+    .announce-bar {
+      background: var(--gold);
+      color: var(--blue-deep);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .announce-bar .ab-icon { width: 16px; height: 16px; flex-shrink: 0; }
+
+    /* ═══════════════════════════════════════════════
+       HEADER
+    ═══════════════════════════════════════════════ */
+    header {
+      background: var(--blue-deep);
+      border-bottom: 2px solid var(--gold);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .logo-icon { width: 38px; height: 38px; }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--gold-light);
+      letter-spacing: 1.5px;
+      line-height: 1;
+    }
+    .header-spacer { flex: 1; }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .header-nav a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .header-nav a:hover { color: var(--gold-light); }
+    .nav-icon { width: 15px; height: 15px; }
+    .secure-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(201,168,76,.1);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+
+    /* ═══════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════ */
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 20px 56px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 32px 20px 40px;
+        gap: 32px;
+      }
+      .hero-image-col { order: -1; }
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201,168,76,.12);
+      border: 1px solid var(--border-s);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+    }
+    .hero-tag .ht-icon { width: 16px; height: 16px; }
+
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 4.5vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-p {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      max-width: 460px;
+    }
+
+    .price-block { margin-bottom: 28px; }
+    .price-from {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .price-from s { color: rgba(154,176,212,.5); }
+    .price-main {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-top: 4px;
+    }
+    .price-current {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 9vw, 52px);
+      font-weight: 800;
+      color: var(--gold-light);
+      letter-spacing: -1px;
+      line-height: 1;
+    }
+    .price-off {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--red);
+      background: rgba(229,62,62,.12);
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+    .price-shipping {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--green);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .price-shipping .ps-icon { width: 14px; height: 14px; }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 420px;
+      height: 58px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--blue-deep);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: box-shadow 0.25s, transform 0.15s;
+      box-shadow: 0 6px 24px rgba(201,168,76,.35);
+    }
+    .btn-cta:hover {
+      box-shadow: 0 8px 32px rgba(201,168,76,.55);
+      transform: translateY(-1px);
+    }
+    .btn-cta:active { transform: scale(0.98); }
+    .btn-cta .cta-icon { width: 20px; height: 20px; }
+
+    /* Hero image */
+    .hero-image-col { display: flex; justify-content: center; align-items: center; }
+    .hero-img-wrap {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(201,168,76,.35), 0 20px 60px rgba(4,25,61,.6);
+      border: 1px solid var(--border);
+      max-width: 500px;
+      width: 100%;
+    }
+    .hero-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* ═══════════════════════════════════════════════
+       TRUST STRIP
+    ═══════════════════════════════════════════════ */
+    .trust-strip {
+      background: var(--blue-mid);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .trust-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .trust-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      padding: 20px 0;
+    }
+    @media (min-width: 640px) { .trust-cards { grid-template-columns: repeat(4, 1fr); } }
+    .trust-card {
+      background: rgba(4,25,61,.6);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 14px 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .trust-card:hover { transform: translateY(-2px); border-color: var(--border-s); }
+    .trust-icon { width: 28px; height: 28px; color: var(--gold); flex-shrink: 0; }
+    .trust-label { font-weight: 700; font-size: 12px; color: var(--white); line-height: 1.3; }
+    .trust-sub   { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+    /* ═══════════════════════════════════════════════
+       GALLERY SECTION
+    ═══════════════════════════════════════════════ */
+    .gallery-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+    .section-label {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 700;
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 36px;
+    }
+    .section-title em { color: var(--gold-light); font-style: italic; }
+
+    .gallery-wrap { position: relative; }
+    .gallery-main {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--blue-mid);
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      box-shadow: 0 0 40px rgba(201,168,76,.15);
+    }
+    .gallery-main img {
+      width: 100%; height: auto;
+      display: block;
+      transition: opacity 0.25s;
+    }
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 16px 20px;
+      background: linear-gradient(to top, rgba(4,25,61,.9), transparent);
+      font-size: 13px;
+      font-style: italic;
+      color: var(--gold-pale);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-main:hover .gallery-caption { opacity: 1; }
+    .gallery-nav-btn {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: rgba(4,25,61,.75);
+      border: 1px solid var(--border-s);
+      color: var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.2s, transform 0.2s;
+      backdrop-filter: blur(4px);
+    }
+    .gallery-nav-btn:hover { background: rgba(4,25,61,.95); transform: translateY(-50%) scale(1.08); }
+    .gallery-nav-btn.prev { left: 12px; }
+    .gallery-nav-btn.next { right: 12px; }
+    .gallery-nav-btn svg { width: 20px; height: 20px; }
+
+    .gallery-thumbs {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+    .gallery-thumbs::-webkit-scrollbar { display: none; }
+    .thumb {
+      flex-shrink: 0;
+      width: 76px; height: 58px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--blue-mid);
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .thumb.active { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+    .thumb:hover:not(.active) { border-color: var(--border-s); }
+
+    /* ═══════════════════════════════════════════════
+       HOW IT WORKS
+    ═══════════════════════════════════════════════ */
+    .how-section {
+      background: var(--blue-mid);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .how-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    @media (max-width: 640px) {
+      .steps-grid { grid-template-columns: 1fr; gap: 16px; }
+    }
+    .step-card {
+      background: rgba(4,25,61,.7);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 24px;
+      text-align: center;
+      position: relative;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .step-card:hover { border-color: var(--border-s); transform: translateY(-3px); }
+    .step-number {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--blue-deep);
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      box-shadow: 0 4px 16px rgba(201,168,76,.3);
+    }
+    .step-icon-wrap {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: rgba(201,168,76,.1);
+      border: 1px solid var(--border-s);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px;
+      color: var(--gold);
+    }
+    .step-icon-wrap svg { width: 24px; height: 24px; }
+    .step-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .step-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* connector line */
+    @media (min-width: 641px) {
+      .steps-grid { position: relative; }
+      .step-card:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 46px; right: -14px;
+        width: 28px; height: 2px;
+        background: linear-gradient(to right, var(--gold), transparent);
+        z-index: 2;
+      }
+    }
+
+    /* ═══════════════════════════════════════════════
+       REVIEWS
+    ═══════════════════════════════════════════════ */
+    .reviews-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 20px;
+    }
+    .rating-summary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .stars-row { color: var(--gold); font-size: 20px; letter-spacing: 3px; }
+    .rating-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--white);
+    }
+    .rating-count { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+    /* scroll track on mobile */
+    .reviews-track {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+    @media (max-width: 900px) { .reviews-track { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) {
+      .reviews-track {
+        grid-template-columns: repeat(3, 280px);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 8px;
+        scrollbar-width: none;
+      }
+      .reviews-track::-webkit-scrollbar { display: none; }
+      .review-card { scroll-snap-align: start; }
+    }
+
+    .review-card {
+      background: var(--blue-mid);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      transition: border-color 0.2s;
+    }
+    .review-card:hover { border-color: var(--border-s); }
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .review-avatar {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--border-s);
+      flex-shrink: 0;
+    }
+    .review-name   { font-weight: 700; font-size: 14px; color: var(--white); }
+    .review-city   { font-size: 11px; color: var(--muted); margin-top: 2px; }
+    .review-stars  { color: var(--gold); font-size: 13px; letter-spacing: 2px; margin-bottom: 10px; }
+    .review-text   { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .review-verified {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 11px; color: var(--green); font-weight: 600;
+      margin-top: 12px;
+    }
+    .review-verified svg { width: 12px; height: 12px; }
+
+    /* ═══════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════ */
+    footer {
+      background: #020e22;
+      border-top: 2px solid var(--gold);
+      margin-top: 20px;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      gap: 32px;
+    }
+    @media (min-width: 640px) { .footer-inner { grid-template-columns: repeat(3, 1fr); } }
+    .footer-logo {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+    }
+    .footer-logo .logo-icon { width: 30px; height: 30px; }
+    .footer-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700; color: var(--gold-light);
+    }
+    .footer-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .footer-section-title {
+      font-weight: 700; font-size: 13px; color: var(--gold);
+      margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links li {
+      font-size: 13px; color: var(--muted);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .footer-links svg { width: 13px; height: 13px; color: var(--gold); flex-shrink: 0; }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding: 16px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .footer-bottom span { color: var(--gold-light); }
+
+    /* ═══════════════════════════════════════════════
+       STICKY BUY BAR (mobile)
+    ═══════════════════════════════════════════════ */
+    .sticky-buy {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--blue-deep);
+      border-top: 2px solid var(--gold);
+      padding: 12px 16px;
+      z-index: 150;
+      gap: 12px;
+      align-items: center;
+    }
+    @media (max-width: 767px) { .sticky-buy { display: flex; } }
+    .sticky-price {
+      flex: 1;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 800; color: var(--gold-light);
+    }
+    .sticky-price small {
+      display: block; font-size: 11px; color: var(--muted);
+      font-family: 'Inter', sans-serif; font-weight: 400;
+    }
+    .sticky-btn {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--blue-deep);
+      font-size: 14px; font-weight: 800; letter-spacing: 0.5px;
+      border-radius: 8px; padding: 12px 22px; border: none; cursor: pointer;
+    }
+
+
+    /* ═══════════════════════════════════════════════
+       MODAL — PERSONALIZATION (3 steps)
+    ═══════════════════════════════════════════════ */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(2,14,34,.88);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .modal-overlay.show { opacity: 1; pointer-events: all; }
+
+    .modal-box {
+      background: var(--blue-deep);
+      border: 1.5px solid var(--border-s);
+      border-radius: 18px;
+      width: 100%; max-width: 520px;
+      position: relative;
+      transform: translateY(28px) scale(0.97);
+      transition: transform 0.35s cubic-bezier(.22,1,.36,1);
+      box-shadow: 0 28px 80px rgba(0,0,0,.75), 0 0 0 1px rgba(201,168,76,.08);
+      max-height: 94vh;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    .modal-overlay.show .modal-box { transform: translateY(0) scale(1); }
+
+    .modal-top {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      height: 6px;
+      border-radius: 18px 18px 0 0;
+      position: sticky; top: 0; z-index: 2;
+    }
+
+    .modal-close {
+      position: absolute; top: 14px; right: 14px;
+      background: rgba(255,255,255,.07);
+      border: none; color: var(--muted);
+      width: 32px; height: 32px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; cursor: pointer; z-index: 3;
+      transition: background 0.2s, color 0.2s;
+    }
+    .modal-close:hover { background: rgba(255,255,255,.14); color: var(--white); }
+
+    .modal-body { padding: 28px 28px 32px; }
+    @media (max-width: 480px) { .modal-body { padding: 20px 18px 28px; } }
+
+    /* step indicator */
+    .step-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .step-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: rgba(201,168,76,.2);
+      border: 1px solid var(--border);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .step-dot.active {
+      background: var(--gold);
+      transform: scale(1.25);
+      border-color: var(--gold-light);
+    }
+    .step-dot.done { background: rgba(201,168,76,.5); }
+
+    /* step visibility */
+    .modal-step { display: none; }
+    .modal-step.active { display: block; }
+
+    .modal-tag {
+      display: inline-block;
+      background: rgba(201,168,76,.12);
+      border: 1px solid var(--border-s);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .modal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      color: var(--white); margin-bottom: 6px;
+    }
+    .modal-sub { font-size: 13px; color: var(--muted); margin-bottom: 22px; line-height: 1.5; }
+
+    /* upload zone */
+    .upload-zone {
+      border: 2px dashed var(--gold);
+      border-radius: 12px;
+      padding: 32px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      background: rgba(201,168,76,.04);
+      position: relative;
+    }
+    .upload-zone:hover, .upload-zone.drag-over {
+      background: rgba(201,168,76,.1);
+      border-color: var(--gold-light);
+    }
+    .upload-zone input[type="file"] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer;
+    }
+    .upload-icon { width: 44px; height: 44px; color: var(--gold); margin: 0 auto 12px; }
+    .upload-label { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .upload-hint { font-size: 12px; color: var(--muted); }
+
+    .photo-preview {
+      display: none;
+      margin-top: 16px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1.5px solid var(--border-s);
+      max-height: 200px;
+      text-align: center;
+    }
+    .photo-preview img {
+      max-height: 200px;
+      max-width: 100%;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+    .photo-preview.show { display: block; }
+    .photo-name {
+      font-size: 12px; color: var(--muted);
+      padding: 8px 12px;
+      background: rgba(201,168,76,.06);
+      border-top: 1px solid var(--border);
+    }
+
+    .upload-tip {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 14px;
+      padding: 10px 14px;
+      background: rgba(201,168,76,.06);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .upload-tip svg { width: 14px; height: 14px; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+
+    /* form fields */
+    .m-field { margin-bottom: 16px; }
+    .m-label {
+      display: block;
+      font-size: 12px; font-weight: 700;
+      color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+    .m-input {
+      width: 100%;
+      background: rgba(11,47,114,.5);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 14px; color: var(--white);
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .m-input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,.12);
+    }
+    .m-input::placeholder { color: rgba(154,176,212,.5); }
+    .m-input.error { border-color: var(--red); }
+    .m-char-count { font-size: 11px; color: var(--muted); text-align: right; margin-top: 3px; }
+    .m-field-error { font-size: 11px; color: var(--red); margin-top: 4px; display: none; }
+    .m-field.has-error .m-field-error { display: block; }
+    .m-field.has-error .m-input { border-color: var(--red); }
+
+    /* live preview for back of necklace */
+    .back-preview {
+      margin: 20px 0;
+      border-radius: 10px;
+      border: 1px solid var(--border-s);
+      overflow: hidden;
+    }
+    .back-preview-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--gold);
+      padding: 8px 14px;
+      background: rgba(201,168,76,.08);
+      border-bottom: 1px solid var(--border);
+    }
+    .back-preview-plate {
+      background: linear-gradient(145deg, #d4a84b, #f0c96a, #c9913a);
+      min-height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 24px;
+      text-align: center;
+      gap: 0;
+    }
+    .bpp-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--blue-deep);
+      line-height: 1.2;
+      min-height: 28px;
+      word-break: break-word;
+    }
+    .bpp-divider {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0 6px;
+      width: 100%;
+      justify-content: center;
+    }
+    .bpp-line {
+      flex: 1; max-width: 60px; height: 1px;
+      background: var(--blue-deep);
+      opacity: 0.4;
+    }
+    .bpp-heart {
+      color: var(--blue-deep);
+      opacity: 0.75;
+      width: 14px; height: 14px;
+    }
+    .bpp-phrase {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--blue-deep);
+      opacity: 0.75;
+      line-height: 1.5;
+      min-height: 18px;
+      word-break: break-word;
+      max-width: 220px;
+    }
+
+    /* divider selector */
+    .divider-toggle {
+      margin-bottom: 16px;
+    }
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .toggle-switch {
+      width: 40px; height: 22px;
+      border-radius: 11px;
+      background: rgba(154,176,212,.2);
+      border: 1px solid var(--border);
+      position: relative;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 2px; left: 2px;
+      width: 16px; height: 16px;
+      border-radius: 50%;
+      background: var(--muted);
+      transition: transform 0.2s, background 0.2s;
+    }
+    input.toggle-input { display: none; }
+    input.toggle-input:checked + .toggle-switch { background: var(--gold); border-color: var(--gold-light); }
+    input.toggle-input:checked + .toggle-switch::after { transform: translateX(18px); background: var(--blue-deep); }
+    .toggle-label { font-size: 13px; color: var(--muted); }
+
+    .divider-options {
+      display: none;
+      margin-top: 12px;
+      gap: 10px;
+    }
+    .divider-options.show { display: flex; flex-wrap: wrap; }
+    .divider-opt {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--muted);
+      transition: border-color 0.2s, color 0.2s;
+      background: rgba(11,47,114,.3);
+    }
+    .divider-opt.selected { border-color: var(--gold); color: var(--gold-light); background: rgba(201,168,76,.08); }
+    .divider-opt svg { width: 16px; height: 16px; }
+
+    /* custom divider upload */
+    .custom-div-upload {
+      display: none;
+      margin-top: 10px;
+    }
+    .custom-div-upload.show { display: block; }
+    .mini-upload {
+      border: 1.5px dashed var(--border-s);
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      background: rgba(201,168,76,.04);
+      font-size: 13px; color: var(--muted);
+      transition: background 0.2s;
+    }
+    .mini-upload:hover { background: rgba(201,168,76,.09); }
+    .mini-upload input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+
+    /* order summary */
+    .order-summary {
+      background: rgba(11,47,114,.4);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 20px;
+    }
+    .os-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .os-row:last-child { margin-bottom: 0; }
+    .os-key { font-weight: 600; color: var(--white); min-width: 90px; flex-shrink: 0; }
+    .os-divider { border: none; border-top: 1px solid var(--border); margin: 12px 0; }
+    .os-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .os-total-label { font-size: 14px; font-weight: 700; color: var(--white); }
+    .os-total-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 800;
+      color: var(--gold-light);
+    }
+    .os-free-ship {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 12px; color: var(--green); font-weight: 600;
+    }
+    .os-free-ship svg { width: 13px; height: 13px; }
+
+    /* next/back buttons */
+    .btn-next {
+      width: 100%; height: 52px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--blue-deep);
+      font-size: 16px; font-weight: 800; letter-spacing: 0.5px;
+      border-radius: 10px; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      transition: box-shadow 0.25s, transform 0.15s;
+      box-shadow: 0 4px 18px rgba(201,168,76,.3);
+    }
+    .btn-next:hover { box-shadow: 0 6px 28px rgba(201,168,76,.5); transform: translateY(-1px); }
+    .btn-next:active { transform: scale(0.98); }
+    .btn-next:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .btn-next svg { width: 18px; height: 18px; }
+
+    .btn-back {
+      background: transparent;
+      border: 1.5px solid var(--border);
+      color: var(--muted);
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 14px; font-weight: 600;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .btn-back:hover { border-color: var(--border-s); color: var(--white); }
+    .btn-row {
+      display: flex; align-items: center;
+      gap: 12px; margin-top: 20px;
+    }
+    .btn-row .btn-next { flex: 1; }
+
+    /* secure row */
+    .m-secure {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; flex-wrap: wrap;
+      margin-top: 14px;
+      font-size: 11px; color: var(--muted);
+    }
+    .m-secure span { display: flex; align-items: center; gap: 5px; }
+    .m-secure svg { width: 12px; height: 12px; color: var(--gold); }
+
+    /* PIX step */
+    .pix-header { text-align: center; margin-bottom: 20px; }
+    .pix-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(37,211,102,.1); border: 1px solid rgba(37,211,102,.3);
+      color: var(--green); font-size: 13px; font-weight: 700;
+      padding: 5px 14px; border-radius: 100px; margin-bottom: 12px;
+    }
+    .pix-badge svg { width: 14px; height: 14px; }
+    .pix-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      color: var(--white); margin-bottom: 4px;
+    }
+    .pix-sub { font-size: 13px; color: var(--muted); }
+
+    .qr-wrap {
+      background: #fff;
+      border-radius: 12px; padding: 14px;
+      margin: 18px auto 0;
+      width: fit-content; max-width: 220px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .qr-wrap img { width: 192px; height: 192px; display: block; }
+    .qr-placeholder {
+      width: 192px; height: 192px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; color: #888; text-align: center; line-height: 1.4;
+    }
+
+    .code-label {
+      font-size: 11px; font-weight: 700; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 0.5px;
+      margin: 18px 0 6px;
+    }
+    .code-box {
+      background: rgba(11,47,114,.4);
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 12px 14px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .code-text {
+      flex: 1; font-size: 11px; color: var(--muted);
+      word-break: break-all; line-height: 1.5;
+      font-family: monospace;
+      max-height: 52px; overflow: hidden;
+      display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    }
+    .btn-copy {
+      flex-shrink: 0;
+      background: var(--gold); color: var(--blue-deep);
+      border: none; border-radius: 6px;
+      padding: 8px 14px; font-size: 12px; font-weight: 800;
+      cursor: pointer; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .btn-copy:hover { background: var(--gold-light); }
+    .btn-copy.copied { background: var(--green); color: #fff; }
+
+    .pix-waiting {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; margin-top: 18px;
+      font-size: 13px; color: var(--muted);
+    }
+    .pix-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--green);
+      animation: blinkDot 1.2s ease-in-out infinite;
+    }
+    @keyframes blinkDot { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+    .pix-expire { text-align: center; margin-top: 10px; font-size: 11px; color: #445; }
+
+    /* loading spinner */
+    .loading-wrap { text-align: center; padding: 40px 20px; }
+    .spinner {
+      width: 52px; height: 52px;
+      border: 3px solid var(--border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loading-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 700; color: var(--white);
+      margin-bottom: 6px;
+    }
+    .loading-sub { font-size: 13px; color: var(--muted); }
+
+    /* error state */
+    .error-wrap { text-align: center; padding: 32px 16px; }
+    .error-icon {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: rgba(229,62,62,.1); border: 2px solid var(--red);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px; color: var(--red);
+    }
+    .error-icon svg { width: 24px; height: 24px; }
+    .error-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 700; color: var(--white);
+      margin-bottom: 8px;
+    }
+    .error-msg { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+    .btn-retry {
+      background: transparent; border: 1.5px solid var(--gold);
+      color: var(--gold); border-radius: 8px;
+      padding: 10px 28px; font-size: 14px; font-weight: 700;
+      cursor: pointer; transition: background 0.2s, color 0.2s;
+    }
+    .btn-retry:hover { background: var(--gold); color: var(--blue-deep); }
+
+    /* m-row */
+    .m-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 400px) { .m-row { grid-template-columns: 1fr; } }
+
+    /* ─── BLINK ─── */
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+
+    @media (max-width: 480px) {
+      .header-nav .nav-label { display: none; }
+      .header-inner { padding: 12px 14px; gap: 10px; }
+      .header-nav { gap: 12px; }
+      .secure-badge { padding: 5px 8px; }
+      .secure-badge-text { display: none; }
+      .logo-text { font-size: 18px; }
+      .logo-icon { width: 30px; height: 30px; }
+      .announce-bar { font-size: 11px; padding: 8px 10px; gap: 6px; text-align: center; }
+      .gallery-nav-btn { width: 34px; height: 34px; }
+      .gallery-nav-btn svg { width: 16px; height: 16px; }
+      .gallery-nav-btn.prev { left: 8px; }
+      .gallery-nav-btn.next { right: 8px; }
+      .thumb { width: 58px; height: 46px; }
+      .gallery-caption { font-size: 11px; padding: 12px 14px; }
+      .btn-cta { max-width: 100%; height: 52px; font-size: 15px; }
+      .hero-p { max-width: none; }
+      .freight-calc { max-width: 100%; }
+      .freight-row { flex-direction: column; align-items: stretch; }
+      .freight-btn { width: 100%; }
+      .price-current { letter-spacing: -0.5px; }
+    }
+
+    /* ═══════════════════════════════════════════════
+       MATERIAL SELECTOR
+    ═══════════════════════════════════════════════ */
+    .material-selector {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .mat-label { font-size: 13px; font-weight: 600; color: var(--muted); }
+    .mat-options { display: flex; gap: 8px; }
+    .mat-opt {
+      display: flex; align-items: center; gap: 7px;
+      padding: 8px 18px; border-radius: 20px;
+      border: 1.5px solid var(--border);
+      background: rgba(11,47,114,.3);
+      font-size: 13px; font-weight: 600; color: var(--muted);
+      cursor: pointer; transition: border-color 0.2s, color 0.2s, background 0.2s;
+    }
+    .mat-opt.active {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      background: rgba(200,144,10,.1);
+    }
+    .mat-swatch {
+      width: 14px; height: 14px; border-radius: 50%;
+      display: inline-block; flex-shrink: 0;
+    }
+    .mat-gold { background: linear-gradient(135deg, #C8900A, #F5B800); }
+    .mat-silver { background: linear-gradient(135deg, #9a9a9a, #e8e8e8); }
+
+    /* ═══════════════════════════════════════════════
+       FREIGHT CALCULATOR
+    ═══════════════════════════════════════════════ */
+    .freight-calc {
+      margin-top: 14px;
+      padding: 14px 16px;
+      background: rgba(11,47,114,.3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      max-width: 420px;
+    }
+    .freight-calc-title {
+      font-size: 12px; font-weight: 700;
+      color: var(--muted); text-transform: uppercase;
+      letter-spacing: 0.5px; margin-bottom: 10px;
+    }
+    .freight-row { display: flex; gap: 8px; align-items: center; }
+    .freight-input {
+      flex: 1;
+      background: rgba(4,25,61,.5);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 10px 12px;
+      font-size: 14px; color: var(--white);
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .freight-input:focus { border-color: var(--gold); }
+    .freight-input::placeholder { color: rgba(154,176,212,.4); }
+    .freight-btn {
+      background: var(--gold); color: var(--blue-deep);
+      border: none; border-radius: 7px;
+      padding: 10px 16px; font-size: 13px; font-weight: 800;
+      cursor: pointer; white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .freight-btn:hover { background: var(--gold-light); }
+    .freight-result { margin-top: 8px; font-size: 13px; min-height: 18px; }
+    .freight-free {
+      display: flex; align-items: center; gap: 6px;
+      color: var(--green); font-weight: 700;
+    }
+    .freight-free svg { width: 14px; height: 14px; }
+
+    /* ═══════════════════════════════════════════════
+       POPUP CUPOM
+    ═══════════════════════════════════════════════ */
+    .popup-overlay {
+      position: fixed; inset: 0;
+      background: rgba(2,14,34,.82);
+      backdrop-filter: blur(5px);
+      z-index: 9998;
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.4s;
+    }
+    .popup-overlay.show { opacity: 1; pointer-events: all; }
+    .popup-box {
+      background: var(--blue-deep);
+      border: 2px solid var(--gold);
+      border-radius: 18px;
+      max-width: 420px; width: 100%;
+      position: relative; overflow: hidden;
+      transform: translateY(28px) scale(0.96);
+      transition: transform 0.4s cubic-bezier(.22,1,.36,1);
+      box-shadow: 0 24px 70px rgba(0,0,0,.75), 0 0 60px rgba(200,144,10,.15);
+    }
+    .popup-overlay.show .popup-box { transform: translateY(0) scale(1); }
+    .popup-stripe {
+      height: 6px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+    }
+    .popup-body { padding: 28px 28px 26px; text-align: center; }
+    .popup-icon-wrap {
+      width: 62px; height: 62px; border-radius: 50%;
+      background: rgba(200,144,10,.12);
+      border: 1.5px solid var(--border-s);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 14px; color: var(--gold-light);
+    }
+    .popup-icon-wrap svg { width: 28px; height: 28px; }
+    .popup-tag-pill {
+      display: inline-block;
+      background: rgba(200,144,10,.12);
+      border: 1px solid var(--border-s);
+      color: var(--gold-light);
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; padding: 4px 14px;
+      border-radius: 20px; margin-bottom: 12px;
+    }
+    .popup-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 25px; font-weight: 800; line-height: 1.2;
+      color: var(--white); margin-bottom: 6px;
+    }
+    .popup-title em { color: var(--gold-light); font-style: italic; }
+    .popup-sub { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 20px; }
+    .popup-coupon-box {
+      background: rgba(11,47,114,.5);
+      border: 2px dashed var(--gold);
+      border-radius: 10px; padding: 14px 18px;
+      margin-bottom: 18px; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .popup-coupon-box:hover { background: rgba(200,144,10,.08); }
+    .popup-coupon-label {
+      font-size: 11px; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px;
+    }
+    .popup-coupon-code {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px; font-weight: 800;
+      color: var(--gold-light); letter-spacing: 4px; user-select: all;
+    }
+    .popup-coupon-hint { font-size: 11px; color: var(--muted); margin-top: 5px; }
+    .popup-coupon-hint.copied { color: var(--green); font-weight: 700; }
+    .popup-cta-btn {
+      display: block; width: 100%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--blue-deep);
+      font-size: 16px; font-weight: 800; letter-spacing: 0.5px;
+      border: none; border-radius: 10px; padding: 14px; cursor: pointer;
+      transition: box-shadow 0.2s, transform 0.15s;
+      box-shadow: 0 4px 18px rgba(200,144,10,.3);
+      margin-bottom: 10px;
+    }
+    .popup-cta-btn:hover { box-shadow: 0 6px 28px rgba(200,144,10,.5); transform: translateY(-1px); }
+    .popup-dismiss {
+      font-size: 12px; color: var(--muted);
+      background: none; border: none;
+      cursor: pointer; text-decoration: underline; transition: color 0.2s;
+    }
+    .popup-dismiss:hover { color: var(--white); }
+    .popup-close-btn {
+      position: absolute; top: 14px; right: 14px;
+      background: rgba(255,255,255,.07); border: none;
+      color: var(--muted); width: 30px; height: 30px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; cursor: pointer; z-index: 1;
+      transition: background 0.2s, color 0.2s;
+    }
+    .popup-close-btn:hover { background: rgba(255,255,255,.15); color: var(--white); }
+    .popup-live-row {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; color: var(--muted); margin-bottom: 14px;
+    }
+    .dot-green {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green); animation: blinkDot 1.2s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ SVG SPRITE ═══════════════ -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden;" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- gift -->
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8v13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8h7a2 2 0 0 0 0-4 5 5 0 0 0-5 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 8H5a2 2 0 0 1 0-4 5 5 0 0 1 5 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- star -->
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor"/></symbol>
+    <!-- shield -->
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- truck -->
+    <symbol id="i-truck" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 8h4l3 3v5h-7V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="5.5" cy="18.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18.5" cy="18.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <!-- package -->
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22V12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.27 6.96 12 12.01l8.73-5.05" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- sparkle / diamond -->
+    <symbol id="i-diamond" viewBox="0 0 24 24"><path d="m2 12 5-7h10l5 7-10 10L2 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12h20M7 5l5 7 5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- lock -->
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- check -->
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- arrow right -->
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- arrow left -->
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- camera -->
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="13" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- edit / pen -->
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- user -->
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- chevron left -->
+    <symbol id="i-chev-l" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- chevron right -->
+    <symbol id="i-chev-r" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <!-- info -->
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="12" y1="8" x2="12" y2="8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="12" x2="12" y2="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <!-- heart -->
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="currentColor"/></symbol>
+    <!-- whatsapp -->
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="currentColor"/></symbol>
+    <!-- pix -->
+    <symbol id="i-pix" viewBox="0 0 24 24"><path d="m5.756 5.756 6.244-6.244 6.244 6.244-6.244 6.244z" fill="currentColor" opacity=".9"/><path d="m.512 11 5.244-5.244 6.244 6.244-6.244 6.244z" fill="currentColor" opacity=".7"/><path d="m12 12l6.244-6.244 5.244 5.244-5.244 5.244z" fill="currentColor" opacity=".7"/><path d="m5.756 18.244 6.244-6.244 6.244 6.244-6.244 6.244z" fill="currentColor" opacity=".9"/></symbol>
+    <!-- necklace logo icon -->
+    <symbol id="i-necklace" viewBox="0 0 40 40">
+      <circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".4"/>
+      <path d="M12 8 Q20 6 28 8 L27 18 Q20 22 13 18 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="12" y1="8" x2="8" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="28" y1="8" x2="32" y2="4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M13 18 Q14 26 20 30 Q26 26 27 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="20" cy="14" r="2.5" fill="currentColor" opacity=".7"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ═══════════════ ANNOUNCE BAR ═══════════════ -->
+<div class="announce-bar" role="banner">
+  <svg class="ab-icon svg-icon" aria-hidden="true"><use href="#i-truck"/></svg>
+  <strong>Frete grátis para todo o Brasil + embalagem de presente inclusa</strong>
+  <svg class="ab-icon svg-icon" aria-hidden="true"><use href="#i-gift"/></svg>
+</div>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo" aria-label="Eternize">
+      <svg class="logo-icon svg-icon" style="color:var(--gold-light)" aria-hidden="true"><use href="#i-necklace"/></svg>
+      <div class="logo-text">Eternize</div>
+    </a>
+    <div class="header-spacer"></div>
+    <nav class="header-nav">
+      <a href="#avaliacoes">
+        <svg class="nav-icon svg-icon" style="color:var(--gold)" aria-hidden="true"><use href="#i-star"/></svg>
+        <span class="nav-label">Avaliações</span>
+      </a>
+      <a href="#como-funciona">
+        <svg class="nav-icon svg-icon" style="color:var(--gold)" aria-hidden="true"><use href="#i-gift"/></svg>
+        <span class="nav-label">Como Funciona</span>
+      </a>
+      <div class="secure-badge">
+        <svg style="width:13px;height:13px;" class="svg-icon" aria-hidden="true"><use href="#i-lock"/></svg>
+        <span class="secure-badge-text">Compra Segura</span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <!-- Text column -->
+  <div class="hero-text-col">
+    <div class="hero-tag">
+      <svg class="ht-icon svg-icon" aria-hidden="true" style="color:var(--gold)"><use href="#i-gift"/></svg>
+      Presente que fica para sempre
+    </div>
+
+    <h1 class="hero-h1">
+      Sua foto, seu nome,<br>
+      <em>sua história no colar.</em>
+    </h1>
+
+    <p class="hero-p">
+      Um colar feito só para você: sua foto impressa na frente e o nome
+      ou frase que mais importa gravado nas costas. Cada peça é única
+      porque cada história é única.
+    </p>
+
+    <div class="material-selector">
+      <span class="mat-label">Material:</span>
+      <div class="mat-options">
+        <button class="mat-opt active" data-mat="dourado" onclick="selectMaterial(this,'dourado')" type="button">
+          <span class="mat-swatch mat-gold"></span> Dourado
+        </button>
+        <button class="mat-opt" data-mat="prata" onclick="selectMaterial(this,'prata')" type="button">
+          <span class="mat-swatch mat-silver"></span> Prata
+        </button>
+      </div>
+    </div>
+
+    <div class="price-block">
+      <div class="price-from">De <s>R$ 149,90</s> por:</div>
+      <div class="price-main">
+        <div class="price-current">R$&nbsp;109,90</div>
+        <div class="price-off">−27%</div>
+      </div>
+      <div class="price-shipping">
+        <svg class="ps-icon svg-icon" aria-hidden="true"><use href="#i-truck"/></svg>
+        Frete grátis para todo o Brasil
+      </div>
+    </div>
+
+    <button class="btn-cta" onclick="openModal()">
+      <svg class="cta-icon svg-icon" aria-hidden="true"><use href="#i-pen"/></svg>
+      PERSONALIZAR MEU COLAR
+    </button>
+
+    <div class="freight-calc">
+      <div class="freight-calc-title">Calcule o frete</div>
+      <div class="freight-row">
+        <input class="freight-input" id="freight-cep" type="text" placeholder="Digite seu CEP" maxlength="9" inputmode="numeric" aria-label="CEP">
+        <button class="freight-btn" onclick="calcFrete()" type="button">Calcular</button>
+      </div>
+      <div class="freight-result" id="freight-result"></div>
+    </div>
+  </div>
+
+  <!-- Image column -->
+  <div class="hero-image-col">
+    <div class="gallery-wrap">
+      <div class="gallery-main">
+        <img id="main-img" src="assets/produto-1.jpg" alt="Colar Eternize" loading="eager">
+        <div class="gallery-caption" id="gallery-caption">Frente e verso — foto gravada a laser + nome personalizado</div>
+        <button class="gallery-nav-btn prev" aria-label="Foto anterior" onclick="prevImg()">
+          <svg class="svg-icon" style="width:20px;height:20px" aria-hidden="true"><use href="#i-chev-l"/></svg>
+        </button>
+        <button class="gallery-nav-btn next" aria-label="Próxima foto" onclick="nextImg()">
+          <svg class="svg-icon" style="width:20px;height:20px" aria-hidden="true"><use href="#i-chev-r"/></svg>
+        </button>
+      </div>
+      <div class="gallery-thumbs" id="gallery-thumbs">
+        <!-- built dynamically by JS based on selected material -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TRUST STRIP ═══════════════ -->
+<div class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-cards">
+      <div class="trust-card">
+        <svg class="trust-icon svg-icon" aria-hidden="true"><use href="#i-shield"/></svg>
+        <div>
+          <div class="trust-label">Compra 100% Segura</div>
+          <div class="trust-sub">Pagamento via Pix criptografado</div>
+        </div>
+      </div>
+      <div class="trust-card">
+        <svg class="trust-icon svg-icon" aria-hidden="true"><use href="#i-diamond"/></svg>
+        <div>
+          <div class="trust-label">Aço Inoxidável</div>
+          <div class="trust-sub">Não escurece, não enferruja</div>
+        </div>
+      </div>
+      <div class="trust-card">
+        <svg class="trust-icon svg-icon" aria-hidden="true"><use href="#i-truck"/></svg>
+        <div>
+          <div class="trust-label">Frete Grátis</div>
+          <div class="trust-sub">Para todo o Brasil</div>
+        </div>
+      </div>
+      <div class="trust-card">
+        <svg class="trust-icon svg-icon" aria-hidden="true"><use href="#i-box"/></svg>
+        <div>
+          <div class="trust-label">Embalagem Premium</div>
+          <div class="trust-sub">Pronta para presente</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section class="how-section" id="como-funciona">
+  <div class="how-inner">
+    <div class="section-label">Simples assim</div>
+    <h2 class="section-title" style="text-align:center">Como funciona</h2>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3 class="step-title">Clique em Personalizar</h3>
+        <p class="step-desc">Escolha a foto e escreva o nome e frase que vão gravados nas costas do colar.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3 class="step-title">Finalize o Pagamento</h3>
+        <p class="step-desc">Pix rápido e seguro — aprovação em segundos, sem complicação.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3 class="step-title">Receba em Casa</h3>
+        <p class="step-desc">Entrega para todo o Brasil com rastreio. Embalagem premium pronta para presentear.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:36px;">
+      <button class="btn-cta" style="max-width:360px;margin:0 auto;" onclick="openModal()">
+        <svg class="cta-icon svg-icon" aria-hidden="true"><use href="#i-arrow-r"/></svg>
+        QUERO O MEU AGORA
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ REVIEWS ═══════════════ -->
+<section class="reviews-section" id="avaliacoes">
+  <div class="section-label">Depoimentos reais</div>
+  <h2 class="section-title">O que nossos clientes dizem</h2>
+
+  <div style="text-align:center;">
+    <div class="rating-summary">
+      <div class="stars-row" aria-label="5 estrelas">★★★★★</div>
+      <div class="rating-num">4.9</div>
+    </div>
+    <div class="rating-count">+ de 2.400 pedidos entregues</div>
+  </div>
+
+  <div class="reviews-track" id="reviews-track">
+    <!-- Cards inserted by JS -->
+  </div>
+</section>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">
+        <svg class="logo-icon svg-icon" style="color:var(--gold-light)" aria-hidden="true"><use href="#i-necklace"/></svg>
+        <div class="footer-logo-text">Eternize Jóias &amp; Colares</div>
+      </div>
+      <p class="footer-desc">Cada colar é feito com cuidado para eternizar o momento mais especial da sua história. Presente que fica para sempre.</p>
+      <ul class="footer-links" style="margin-top:14px;">
+        <li>
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-shield"/></svg>
+          CNPJ: 26.017.950/0001-12
+        </li>
+        <li>
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-user"/></svg>
+          São Paulo, SP
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-section-title">Informações</div>
+      <ul class="footer-links">
+        <li>
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-shield"/></svg>
+          Compra 100% segura
+        </li>
+        <li>
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-truck"/></svg>
+          Frete grátis para todo o Brasil
+        </li>
+        <li>
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-box"/></svg>
+          Embalagem de presente inclusa
+        </li>
+        <li>
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-check"/></svg>
+          Aço inoxidável, não enferruja
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-section-title">Atendimento</div>
+      <ul class="footer-links">
+        <li>
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-wa"/></svg>
+          (11) 9762-7379
+        </li>
+        <li>
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-user"/></svg>
+          Segunda a sexta, das 9h às 18h
+        </li>
+        <li>
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-lock"/></svg>
+          Seus dados estão protegidos (LGPD)
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 <span>Eternize Jóias &amp; Colares</span>. Todos os direitos reservados.
+  </div>
+</footer>
+
+<!-- ═══════════════ STICKY BAR ═══════════════ -->
+<div class="sticky-buy">
+  <div class="sticky-price">
+    R$&nbsp;109,90
+    <small>Frete Grátis</small>
+  </div>
+  <button class="sticky-btn" onclick="openModal()">PERSONALIZAR</button>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     MODAL — PERSONALIZAÇÃO
+═══════════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box" id="modal-box">
+    <div class="modal-top"></div>
+    <button class="modal-close" onclick="closeModal()" aria-label="Fechar">✕</button>
+
+    <div class="modal-body">
+      <!-- Step indicator -->
+      <div class="step-indicator" role="status" aria-live="polite" aria-label="Passo atual">
+        <div class="step-dot active" id="dot-1"></div>
+        <div class="step-dot" id="dot-2"></div>
+        <div class="step-dot" id="dot-3"></div>
+      </div>
+
+      <!-- ══ STEP 1 — FOTO ══ -->
+      <div class="modal-step active" id="step-1">
+        <div class="modal-tag">Passo 1 de 3</div>
+        <h2 class="modal-title" id="modal-title">Escolha a foto</h2>
+        <p class="modal-sub">Esta foto será impressa na frente do colar.</p>
+
+        <div class="upload-zone" id="upload-zone">
+          <input type="file" id="photo-input" accept="image/jpeg,image/png,image/webp" aria-label="Enviar foto">
+          <svg class="upload-icon svg-icon" aria-hidden="true"><use href="#i-camera"/></svg>
+          <div class="upload-label">Clique para enviar sua foto</div>
+          <div class="upload-hint">JPG, PNG — máx. 10 MB</div>
+        </div>
+
+        <div class="photo-preview" id="photo-preview">
+          <img id="photo-img" src="" alt="Prévia da foto">
+          <div class="photo-name" id="photo-name"></div>
+        </div>
+
+        <div class="upload-tip">
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-info"/></svg>
+          <span>Fotos com boa iluminação e rosto centralizado ficam mais bonitas no colar.</span>
+        </div>
+
+        <div class="btn-row" style="margin-top:24px;">
+          <button class="btn-next" id="btn-next-1" onclick="goToStep(2)" disabled>
+            PRÓXIMO
+            <svg class="svg-icon" aria-hidden="true"><use href="#i-arrow-r"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ══ STEP 2 — NOME E TEXTO ══ -->
+      <div class="modal-step" id="step-2">
+        <div class="modal-tag">Passo 2 de 3</div>
+        <h2 class="modal-title">Personalize as costas</h2>
+        <p class="modal-sub">Nome e frase que serão gravados a laser.</p>
+
+        <div class="m-field" id="field-name-back">
+          <label class="m-label" for="input-name">Nome principal *</label>
+          <input class="m-input" id="input-name" type="text" maxlength="15" placeholder="Ex: Maria" autocomplete="off">
+          <div class="m-char-count"><span id="count-name">0</span>/15</div>
+          <div class="m-field-error">Por favor insira o nome.</div>
+        </div>
+
+        <div class="m-field">
+          <label class="m-label" for="input-phrase">Frase ou data <small style="font-weight:400;text-transform:none;letter-spacing:0">(opcional)</small></label>
+          <input class="m-input" id="input-phrase" type="text" maxlength="30" placeholder="Ex: Para sempre no meu coração" autocomplete="off">
+          <div class="m-char-count"><span id="count-phrase">0</span>/30</div>
+        </div>
+
+        <!-- Live preview -->
+        <div class="back-preview">
+          <div class="back-preview-label">Prévia das costas do colar</div>
+          <div class="back-preview-plate" id="bpp">
+            <div class="bpp-name" id="bpp-name">Nome</div>
+            <div class="bpp-divider" id="bpp-divider">
+              <div class="bpp-line"></div>
+              <svg class="bpp-heart svg-icon" aria-hidden="true"><use href="#i-heart"/></svg>
+              <div class="bpp-line"></div>
+            </div>
+            <div class="bpp-phrase" id="bpp-phrase">Sua frase aqui</div>
+          </div>
+        </div>
+
+        <!-- Divider toggle -->
+        <div class="divider-toggle m-field">
+          <label class="toggle-row">
+            <input type="checkbox" class="toggle-input" id="divider-toggle" onchange="toggleDivider(this)">
+            <span class="toggle-switch"></span>
+            <span class="toggle-label">Adicionar divisória entre nome e frase</span>
+          </label>
+
+          <div class="divider-options" id="divider-options">
+            <div class="divider-opt selected" data-type="heart" onclick="selectDivider(this,'heart')">
+              <svg class="svg-icon" style="width:16px;height:16px;color:var(--gold)" aria-hidden="true"><use href="#i-heart"/></svg>
+              Coração
+            </div>
+            <div class="divider-opt" data-type="line" onclick="selectDivider(this,'line')">
+              <span style="font-size:18px;color:var(--gold);line-height:1;">—</span>
+              Linha simples
+            </div>
+            <div class="divider-opt" data-type="custom" onclick="selectDivider(this,'custom')">
+              <svg class="svg-icon" style="width:16px;height:16px;color:var(--gold)" aria-hidden="true"><use href="#i-camera"/></svg>
+              Personalizada
+            </div>
+          </div>
+
+          <div class="custom-div-upload" id="custom-div-upload">
+            <div class="mini-upload">
+              <input type="file" id="divider-img-input" accept="image/*" aria-label="Enviar imagem da divisória">
+              <svg class="svg-icon" style="width:18px;height:18px;color:var(--gold);margin:0 auto 6px" aria-hidden="true"><use href="#i-camera"/></svg>
+              <div>Envie a imagem da divisória personalizada</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <button class="btn-back" onclick="goToStep(1)">
+            <svg class="svg-icon" style="width:16px;height:16px" aria-hidden="true"><use href="#i-arrow-l"/></svg>
+            Voltar
+          </button>
+          <button class="btn-next" id="btn-next-2" onclick="goToStep(3)" disabled>
+            PRÓXIMO
+            <svg class="svg-icon" aria-hidden="true"><use href="#i-arrow-r"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ══ STEP 3 — DADOS + CHECKOUT ══ -->
+      <div class="modal-step" id="step-3">
+        <div class="modal-tag">Passo 3 de 3</div>
+        <h2 class="modal-title">Quase lá!</h2>
+        <p class="modal-sub">Preencha seus dados para finalizar o pedido.</p>
+
+        <!-- Order summary -->
+        <div class="order-summary" id="order-summary">
+          <div class="os-row">
+            <span class="os-key">
+              <svg class="svg-icon" style="width:14px;height:14px;color:var(--gold);vertical-align:-2px" aria-hidden="true"><use href="#i-box"/></svg>
+              Produto
+            </span>
+            <span>Colar Eternize Personalizado</span>
+          </div>
+          <div class="os-row">
+            <span class="os-key">Material</span>
+            <span id="summary-material" style="color:var(--white)">Dourado</span>
+          </div>
+          <div class="os-row">
+            <span class="os-key">Foto</span>
+            <span id="summary-photo" style="color:var(--white)">-</span>
+          </div>
+          <div class="os-row">
+            <span class="os-key">Nome gravado</span>
+            <span id="summary-name" style="color:var(--white)">-</span>
+          </div>
+          <div class="os-row">
+            <span class="os-key">Frase</span>
+            <span id="summary-phrase" style="color:var(--muted)">-</span>
+          </div>
+          <hr class="os-divider">
+          <div class="os-total">
+            <div>
+              <div class="os-total-label">Total</div>
+              <div class="os-free-ship">
+                <svg class="svg-icon" aria-hidden="true"><use href="#i-truck"/></svg>
+                Frete Grátis
+              </div>
+            </div>
+            <div class="os-total-price">R$&nbsp;109,90</div>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div id="checkout-form">
+          <div class="m-field" id="field-full-name">
+            <label class="m-label" for="inp-fullname">Nome completo *</label>
+            <input class="m-input" id="inp-fullname" type="text" placeholder="Seu nome completo" autocomplete="name">
+            <div class="m-field-error">Informe seu nome completo.</div>
+          </div>
+          <div class="m-row">
+            <div class="m-field" id="field-email">
+              <label class="m-label" for="inp-email">E-mail *</label>
+              <input class="m-input" id="inp-email" type="email" placeholder="seu@email.com" autocomplete="email">
+              <div class="m-field-error">E-mail inválido.</div>
+            </div>
+            <div class="m-field" id="field-cpf">
+              <label class="m-label" for="inp-cpf">CPF *</label>
+              <input class="m-input" id="inp-cpf" type="text" placeholder="000.000.000-00" maxlength="14" inputmode="numeric" autocomplete="off">
+              <div class="m-field-error">CPF inválido.</div>
+            </div>
+          </div>
+          <div class="m-field" id="field-phone">
+            <label class="m-label" for="inp-phone">WhatsApp *</label>
+            <input class="m-input" id="inp-phone" type="tel" placeholder="(00) 00000-0000" maxlength="15" inputmode="numeric" autocomplete="tel">
+            <div class="m-field-error">Número inválido.</div>
+          </div>
+
+          <div class="btn-row" style="margin-top:8px;">
+            <button class="btn-back" onclick="goToStep(2)">
+              <svg class="svg-icon" style="width:16px;height:16px" aria-hidden="true"><use href="#i-arrow-l"/></svg>
+              Voltar
+            </button>
+            <button class="btn-next" id="btn-submit" onclick="submitOrder()">
+              <svg class="svg-icon" aria-hidden="true"><use href="#i-lock"/></svg>
+              GERAR PIX — R$&nbsp;109,90
+            </button>
+          </div>
+
+          <div class="m-secure">
+            <span><svg class="svg-icon" aria-hidden="true"><use href="#i-shield"/></svg> Dados criptografados</span>
+            <span><svg class="svg-icon" aria-hidden="true"><use href="#i-lock"/></svg> Ambiente seguro</span>
+            <span><svg class="svg-icon" aria-hidden="true"><use href="#i-check"/></svg> Pix instantâneo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ LOADING ══ -->
+      <div class="modal-step" id="step-loading">
+        <div class="loading-wrap">
+          <div class="spinner"></div>
+          <div class="loading-title">Gerando seu Pix…</div>
+          <div class="loading-sub">Conectando ao gateway de pagamento</div>
+        </div>
+      </div>
+
+      <!-- ══ PIX STEP ══ -->
+      <div class="modal-step" id="step-pix">
+        <div class="pix-header">
+          <div class="pix-badge">
+            <svg class="svg-icon" aria-hidden="true"><use href="#i-check"/></svg>
+            Pix gerado com sucesso
+          </div>
+          <div class="pix-title">Finalize o pagamento</div>
+          <div class="pix-sub">Escaneie o QR Code ou copie o código abaixo</div>
+        </div>
+
+        <div class="qr-wrap">
+          <img id="pix-qr-img" src="" alt="QR Code Pix" style="display:none;">
+          <div class="qr-placeholder" id="pix-qr-placeholder">QR Code carregando…</div>
+        </div>
+
+        <div class="code-label">Código Pix (copia e cola)</div>
+        <div class="code-box">
+          <div class="code-text" id="pix-code">—</div>
+          <button class="btn-copy" id="btn-copy-pix" onclick="copyPix()">Copiar</button>
+        </div>
+
+        <div class="pix-waiting">
+          <div class="pix-dot"></div>
+          Aguardando confirmação do pagamento…
+        </div>
+        <div class="pix-expire">O código expira em 30 minutos</div>
+
+        <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:14px;line-height:1.5;">
+          Após o pagamento confirmaremos seu pedido pelo WhatsApp e enviaremos o colar personalizado.
+        </p>
+      </div>
+
+      <!-- ══ ERROR ══ -->
+      <div class="modal-step" id="step-error">
+        <div class="error-wrap">
+          <div class="error-icon">
+            <svg class="svg-icon" aria-hidden="true"><use href="#i-info"/></svg>
+          </div>
+          <div class="error-title">Algo deu errado</div>
+          <div class="error-msg" id="error-msg">Não foi possível gerar o Pix. Por favor tente novamente.</div>
+          <button class="btn-retry" onclick="retryOrder()">Tentar novamente</button>
+        </div>
+      </div>
+
+    </div><!-- /modal-body -->
+  </div><!-- /modal-box -->
+</div><!-- /modal-overlay -->
+
+<!-- ═══════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════ -->
+<script>
+/* ─────────────────────── CONSTANTS ─────────────────────── */
+const PRODUCT_NAME = 'Eternize'; // easy to swap
+
+/* ─────────────────────── GALLERY ─────────────────────── */
+const galleryByMaterial = {
+  dourado: [
+    { src: 'assets/produto-1.jpg', caption: 'Frente e verso: foto gravada a laser e nome personalizado' },
+    { src: 'assets/produto-2.jpg', caption: 'Embalagem premium, pronta para presentear' },
+    { src: 'assets/produto-3.jpg', caption: 'Costas: nome e frase personalizada gravada a laser' },
+    { src: 'assets/produto-4.jpg', caption: 'Vista frente e costas em aço inoxidável dourado' },
+    { src: 'assets/produto-6.jpg', caption: 'Presente que fica para sempre' },
+  ],
+  prata: [
+    { src: 'assets/prata-2.png', caption: 'Colar Eternize — versão prata' },
+    { src: 'assets/prata-3.png', caption: 'Acabamento prata: elegante e duradouro' },
+    { src: 'assets/produto-5.jpg', caption: 'Detalhes do acabamento prata' },
+  ],
+};
+
+let currentImg = 0;
+let galleryImages = galleryByMaterial.dourado;
+let autoSlideTimer = null;
+
+function getActiveImages() {
+  return galleryImages;
+}
+
+function buildThumbs() {
+  const thumbsEl = document.getElementById('gallery-thumbs');
+  thumbsEl.innerHTML = '';
+  galleryImages.forEach((img, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'thumb' + (i === 0 ? ' active' : '');
+    btn.dataset.index = i;
+    btn.setAttribute('aria-label', img.caption);
+    btn.onclick = () => changeImg(i);
+    const im = document.createElement('img');
+    im.src = img.src;
+    im.alt = img.caption;
+    btn.appendChild(im);
+    thumbsEl.appendChild(btn);
+  });
+}
+
+function changeImg(idx) {
+  currentImg = ((idx % galleryImages.length) + galleryImages.length) % galleryImages.length;
+  const img = document.getElementById('main-img');
+  img.style.opacity = '0';
+  setTimeout(() => {
+    img.src = galleryImages[currentImg].src;
+    img.alt = galleryImages[currentImg].caption;
+    document.getElementById('gallery-caption').textContent = galleryImages[currentImg].caption;
+    img.style.opacity = '1';
+  }, 180);
+  document.querySelectorAll('.thumb').forEach((t, i) => {
+    t.classList.toggle('active', i === currentImg);
+  });
+}
+
+function prevImg() {
+  changeImg(currentImg - 1);
+  resetAutoSlide();
+}
+function nextImg() {
+  changeImg(currentImg + 1);
+  resetAutoSlide();
+}
+
+function startAutoSlide() {
+  stopAutoSlide();
+  autoSlideTimer = setInterval(() => {
+    changeImg(currentImg + 1);
+  }, 3500);
+}
+function stopAutoSlide() {
+  if (autoSlideTimer) { clearInterval(autoSlideTimer); autoSlideTimer = null; }
+}
+function resetAutoSlide() {
+  stopAutoSlide();
+  startAutoSlide();
+}
+
+function switchGalleryTo(mat) {
+  galleryImages = galleryByMaterial[mat] || galleryByMaterial.dourado;
+  currentImg = 0;
+  buildThumbs();
+  const img = document.getElementById('main-img');
+  img.style.opacity = '0';
+  setTimeout(() => {
+    img.src = galleryImages[0].src;
+    document.getElementById('gallery-caption').textContent = galleryImages[0].caption;
+    img.style.opacity = '1';
+  }, 180);
+  resetAutoSlide();
+}
+
+// Init gallery
+buildThumbs();
+startAutoSlide();
+
+// keyboard nav on gallery
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('modal-overlay').classList.contains('show')) return;
+  if (e.key === 'ArrowLeft') prevImg();
+  if (e.key === 'ArrowRight') nextImg();
+});
+
+/* ─────────────────────── REVIEWS ─────────────────────── */
+const reviews = [
+  { name: 'Mariana S.', city: 'São Paulo, SP', stars: 5, avatar: 'assets/reviews/rev-1.jpg',
+    text: 'Comprei para o aniversário do meu marido. Ele chorou quando abriu. A foto ficou nítida e o nome gravado ficou lindo demais. Superou todas as expectativas!' },
+  { name: 'Juliana R.', city: 'Curitiba, PR', stars: 5, avatar: 'assets/reviews/rev-2.jpg',
+    text: 'Entrega rápida e embalagem impecável. O colar é pesado, sólido, parece bem mais caro do que o preço. Recomendo 100%!' },
+  { name: 'Carlos M.', city: 'Belo Horizonte, MG', stars: 5, avatar: 'assets/reviews/rev-3.jpg',
+    text: 'Dei de presente para minha mãe com foto nossa. Ela não tira mais. O acabamento dourado é perfeito, não escureceu nem um pouco.' },
+  { name: 'Fernanda L.', city: 'Rio de Janeiro, RJ', stars: 5, avatar: 'assets/reviews/rev-4.jpg',
+    text: 'Presentei minha filha e ela amou. A frase nas costas ficou exatamente como pedi. Voltarei a comprar com certeza.' },
+  { name: 'Roberto A.', city: 'Fortaleza, CE', stars: 5, avatar: 'assets/reviews/rev-5.jpg',
+    text: 'Atendimento rápido pelo WhatsApp, enviaram a foto de aprovação antes de produzir. Muito cuidado com o cliente. Produto lindo!' },
+];
+
+(function renderReviews() {
+  const track = document.getElementById('reviews-track');
+  const dates = ['12 jul 2024', '8 jul 2024', '3 jul 2024', '28 jun 2024', '22 jun 2024'];
+  reviews.forEach((r, i) => {
+    const stars = '★'.repeat(r.stars);
+    track.insertAdjacentHTML('beforeend', `
+      <div class="review-card">
+        <div class="review-header">
+          <img class="review-avatar" src="${r.avatar}" alt="${r.name}" loading="lazy">
+          <div>
+            <div class="review-name">${r.name}</div>
+            <div class="review-city">${r.city} · ${dates[i]}</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="${r.stars} estrelas">${stars}</div>
+        <p class="review-text">"${r.text}"</p>
+        <div class="review-verified">
+          <svg class="svg-icon" aria-hidden="true"><use href="#i-check"/></svg>
+          Compra verificada
+        </div>
+      </div>
+    `);
+  });
+})();
+
+/* ─────────────────────── MODAL CONTROL ─────────────────────── */
+let currentStep = 1;
+
+function openModal() {
+  document.getElementById('modal-overlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+  goToStep(1);
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+// Close on backdrop click
+document.getElementById('modal-overlay').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+});
+
+// Close on Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+function goToStep(n) {
+  // Hide all steps
+  document.querySelectorAll('.modal-step').forEach(s => s.classList.remove('active'));
+
+  // Update step indicator dots
+  ['dot-1','dot-2','dot-3'].forEach((id, i) => {
+    const dot = document.getElementById(id);
+    dot.classList.remove('active','done');
+    if (i + 1 < n)  dot.classList.add('done');
+    if (i + 1 === n) dot.classList.add('active');
+  });
+
+  currentStep = n;
+
+  if (n === 1) {
+    document.getElementById('step-1').classList.add('active');
+  } else if (n === 2) {
+    document.getElementById('step-2').classList.add('active');
+    updateSummary();
+  } else if (n === 3) {
+    // validate step 2
+    const nameVal = document.getElementById('input-name').value.trim();
+    const field = document.getElementById('field-name-back');
+    if (!nameVal) {
+      field.classList.add('has-error');
+      return;
+    }
+    field.classList.remove('has-error');
+    document.getElementById('step-3').classList.add('active');
+    updateSummary();
+  } else if (n === 'loading') {
+    document.querySelectorAll('.step-dot').forEach(d => d.classList.add('done'));
+    document.getElementById('step-loading').classList.add('active');
+  } else if (n === 'pix') {
+    document.getElementById('step-pix').classList.add('active');
+  } else if (n === 'error') {
+    document.getElementById('step-error').classList.add('active');
+  }
+
+  // scroll to top of modal
+  const box = document.getElementById('modal-box');
+  box.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function updateSummary() {
+  const photoFile = document.getElementById('photo-input').files[0];
+  const nameVal   = document.getElementById('input-name').value.trim();
+  const phraseVal = document.getElementById('input-phrase').value.trim();
+  document.getElementById('summary-photo').textContent    = photoFile ? photoFile.name : '-';
+  document.getElementById('summary-name').textContent     = nameVal   || '-';
+  document.getElementById('summary-phrase').textContent   = phraseVal || '-';
+  document.getElementById('summary-material').textContent = currentMaterial === 'prata' ? 'Prata' : 'Dourado';
+}
+
+/* ─────────────────────── MATERIAL SELECTOR ─────────────────────── */
+let currentMaterial = 'dourado';
+
+function selectMaterial(btn, mat) {
+  document.querySelectorAll('.mat-opt').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentMaterial = mat;
+  // Update back-preview plate color in modal
+  const plate = document.getElementById('bpp');
+  if (plate) {
+    plate.style.background = mat === 'prata'
+      ? 'linear-gradient(145deg, #9e9e9e, #e0e0e0, #b0b0b0)'
+      : 'linear-gradient(145deg, #d4a84b, #f0c96a, #c9913a)';
+  }
+  // Switch gallery to match selected material
+  switchGalleryTo(mat);
+}
+
+/* ─────────────────────── FREIGHT CALCULATOR ─────────────────────── */
+document.getElementById('freight-cep').addEventListener('input', (e) => {
+  let v = e.target.value.replace(/\D/g, '');
+  if (v.length > 8) v = v.slice(0, 8);
+  if (v.length > 5) v = v.slice(0, 5) + '-' + v.slice(5);
+  e.target.value = v;
+});
+
+function calcFrete() {
+  const cep = document.getElementById('freight-cep').value.replace(/\D/g,'');
+  const result = document.getElementById('freight-result');
+  if (cep.length < 8) {
+    result.innerHTML = '<span style="color:var(--red);font-size:12px;">Digite um CEP válido com 8 dígitos.</span>';
+    return;
+  }
+  result.innerHTML = '<span style="color:var(--muted);font-size:12px;">Calculando...</span>';
+  setTimeout(() => {
+    result.innerHTML = `<span class="freight-free"><svg class="svg-icon" aria-hidden="true"><use href="#i-truck"/></svg> Frete Grátis para o seu CEP!</span>`;
+  }, 600);
+}
+
+/* ─────────────────────── POPUP CUPOM ─────────────────────── */
+const POPUP_KEY = 'eternize_popup_shown';
+
+function showPopup() {
+  if (localStorage.getItem(POPUP_KEY)) return;
+  document.getElementById('popup-overlay').classList.add('show');
+  localStorage.setItem(POPUP_KEY, '1');
+}
+
+function closePopup() {
+  document.getElementById('popup-overlay').classList.remove('show');
+}
+
+function closePopupAndOpen() {
+  closePopup();
+  setTimeout(() => openModal(), 200);
+}
+
+function copyCoupon() {
+  const code = document.getElementById('popup-code').textContent;
+  const hint = document.getElementById('popup-hint');
+  navigator.clipboard.writeText(code).then(() => {
+    hint.textContent = 'Copiado!';
+    hint.classList.add('copied');
+    setTimeout(() => {
+      hint.textContent = 'Clique para copiar o código';
+      hint.classList.remove('copied');
+    }, 2500);
+  }).catch(() => {
+    const ta = document.createElement('textarea');
+    ta.value = code;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+    hint.textContent = 'Copiado!';
+    hint.classList.add('copied');
+    setTimeout(() => {
+      hint.textContent = 'Clique para copiar o código';
+      hint.classList.remove('copied');
+    }, 2500);
+  });
+}
+
+// Show popup after 4-8 seconds (random)
+const delay = 4000 + Math.random() * 4000;
+setTimeout(showPopup, delay);
+
+/* ─────────────────────── PHOTO UPLOAD ─────────────────────── */
+const photoInput = document.getElementById('photo-input');
+const photoPreview = document.getElementById('photo-preview');
+const photoImg    = document.getElementById('photo-img');
+const photoNameEl = document.getElementById('photo-name');
+const btnNext1    = document.getElementById('btn-next-1');
+const uploadZone  = document.getElementById('upload-zone');
+
+photoInput.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  if (file.size > 10 * 1024 * 1024) {
+    alert('Arquivo muito grande. Máximo 10 MB.');
+    photoInput.value = '';
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    photoImg.src = ev.target.result;
+    photoNameEl.textContent = file.name;
+    photoPreview.classList.add('show');
+    btnNext1.disabled = false;
+  };
+  reader.readAsDataURL(file);
+});
+
+// Drag & drop
+uploadZone.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  uploadZone.classList.add('drag-over');
+});
+uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+uploadZone.addEventListener('drop', (e) => {
+  e.preventDefault();
+  uploadZone.classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file && file.type.startsWith('image/')) {
+    const dt = new DataTransfer();
+    dt.items.add(file);
+    photoInput.files = dt.files;
+    photoInput.dispatchEvent(new Event('change'));
+  }
+});
+
+/* ─────────────────────── BACK ENGRAVING — LIVE PREVIEW ─────────────────────── */
+const inputName   = document.getElementById('input-name');
+const inputPhrase = document.getElementById('input-phrase');
+const bppName     = document.getElementById('bpp-name');
+const bppPhrase   = document.getElementById('bpp-phrase');
+const btnNext2    = document.getElementById('btn-next-2');
+
+inputName.addEventListener('input', () => {
+  const v = inputName.value;
+  document.getElementById('count-name').textContent = v.length;
+  bppName.textContent = v || 'Nome';
+  btnNext2.disabled = !v.trim();
+  document.getElementById('field-name-back').classList.remove('has-error');
+});
+
+inputPhrase.addEventListener('input', () => {
+  const v = inputPhrase.value;
+  document.getElementById('count-phrase').textContent = v.length;
+  bppPhrase.textContent = v || 'Sua frase aqui';
+});
+
+/* ─────────────────────── DIVIDER TOGGLE ─────────────────────── */
+let currentDivider = 'heart';
+
+function toggleDivider(checkbox) {
+  const opts = document.getElementById('divider-options');
+  const dividerEl = document.getElementById('bpp-divider');
+  if (checkbox.checked) {
+    opts.classList.add('show');
+    dividerEl.style.display = 'flex';
+    updateDividerPreview();
+  } else {
+    opts.classList.remove('show');
+    dividerEl.style.display = 'none';
+    document.getElementById('custom-div-upload').classList.remove('show');
+  }
+}
+
+function selectDivider(el, type) {
+  document.querySelectorAll('.divider-opt').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  currentDivider = type;
+  const customUpload = document.getElementById('custom-div-upload');
+  customUpload.classList.toggle('show', type === 'custom');
+  updateDividerPreview();
+}
+
+function updateDividerPreview() {
+  const divEl = document.getElementById('bpp-divider');
+  if (currentDivider === 'heart') {
+    divEl.innerHTML = `
+      <div class="bpp-line"></div>
+      <svg class="bpp-heart svg-icon" aria-hidden="true"><use href="#i-heart"/></svg>
+      <div class="bpp-line"></div>`;
+  } else if (currentDivider === 'line') {
+    divEl.innerHTML = `<div style="width:60px;height:1px;background:var(--blue-deep);opacity:0.5;"></div>`;
+  } else {
+    divEl.innerHTML = `<div style="font-size:11px;color:var(--blue-deep);opacity:0.6;">✦ personalizada ✦</div>`;
+  }
+}
+
+/* ─────────────────────── INPUT MASKS ─────────────────────── */
+document.getElementById('inp-cpf').addEventListener('input', (e) => {
+  let v = e.target.value.replace(/\D/g,'');
+  if (v.length > 11) v = v.slice(0,11);
+  v = v.replace(/(\d{3})(\d)/,'$1.$2')
+       .replace(/(\d{3})\.(\d{3})(\d)/,'$1.$2.$3')
+       .replace(/(\d{3})\.(\d{3})\.(\d{3})(\d)/,'$1.$2.$3-$4');
+  e.target.value = v;
+});
+
+document.getElementById('inp-phone').addEventListener('input', (e) => {
+  let v = e.target.value.replace(/\D/g,'');
+  if (v.length > 11) v = v.slice(0,11);
+  if (v.length >= 11) v = v.replace(/(\d{2})(\d{5})(\d{4})/,'($1) $2-$3');
+  else if (v.length >= 7) v = v.replace(/(\d{2})(\d{4,5})(\d*)/,'($1) $2-$3');
+  else if (v.length >= 3) v = v.replace(/(\d{2})(\d*)/,'($1) $2');
+  e.target.value = v;
+});
+
+/* ─────────────────────── FORM VALIDATION ─────────────────────── */
+function validateForm() {
+  let ok = true;
+
+  const fullname = document.getElementById('inp-fullname').value.trim();
+  const fnField  = document.getElementById('field-full-name');
+  fnField.classList.toggle('has-error', !fullname);
+  if (!fullname) ok = false;
+
+  const email   = document.getElementById('inp-email').value.trim();
+  const emField = document.getElementById('field-email');
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  emField.classList.toggle('has-error', !emailOk);
+  if (!emailOk) ok = false;
+
+  const cpf    = document.getElementById('inp-cpf').value.replace(/\D/g,'');
+  const cpfF   = document.getElementById('field-cpf');
+  cpfF.classList.toggle('has-error', cpf.length !== 11);
+  if (cpf.length !== 11) ok = false;
+
+  const phone  = document.getElementById('inp-phone').value.replace(/\D/g,'');
+  const phF    = document.getElementById('field-phone');
+  phF.classList.toggle('has-error', phone.length < 10);
+  if (phone.length < 10) ok = false;
+
+  return ok;
+}
+
+/* ─────────────────────── SUBMIT ORDER ─────────────────────── */
+async function submitOrder() {
+  if (!validateForm()) return;
+
+  const photoFile = document.getElementById('photo-input').files[0];
+  const fullname  = document.getElementById('inp-fullname').value.trim();
+  const email     = document.getElementById('inp-email').value.trim();
+  const cpf       = document.getElementById('inp-cpf').value.replace(/\D/g,'');
+  const phone     = document.getElementById('inp-phone').value.replace(/\D/g,'');
+  const engName   = document.getElementById('input-name').value.trim();
+  const engPhrase = document.getElementById('input-phrase').value.trim();
+
+  goToStep('loading');
+
+  try {
+    const res = await fetch('/api/pix', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:           fullname,
+        email,
+        phone,
+        document:       cpf,
+        photoName:      photoFile ? photoFile.name : '',
+        engravedName:   engName,
+        engravedPhrase: engPhrase,
+        material:       currentMaterial,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      document.getElementById('error-msg').textContent =
+        data.message || 'Não foi possível gerar o Pix. Tente novamente.';
+      goToStep('error');
+      return;
+    }
+
+    // Show PIX
+    const qrImg = document.getElementById('pix-qr-img');
+    const qrPh  = document.getElementById('pix-qr-placeholder');
+    if (data.pix?.image) {
+      qrImg.src = data.pix.image.startsWith('data:') ? data.pix.image : `data:image/png;base64,${data.pix.image}`;
+      qrImg.style.display = 'block';
+      qrPh.style.display  = 'none';
+    } else {
+      qrPh.textContent = 'QR Code indisponível — use o código abaixo';
+    }
+
+    document.getElementById('pix-code').textContent = data.pix?.code || '—';
+    goToStep('pix');
+
+  } catch (err) {
+    console.error('[submit]', err);
+    document.getElementById('error-msg').textContent =
+      'Erro de conexão. Verifique sua internet e tente novamente.';
+    goToStep('error');
+  }
+}
+
+function retryOrder() {
+  goToStep(3);
+}
+
+/* ─────────────────────── COPY PIX CODE ─────────────────────── */
+function copyPix() {
+  const code = document.getElementById('pix-code').textContent;
+  if (!code || code === '—') return;
+  navigator.clipboard.writeText(code).then(() => {
+    const btn = document.getElementById('btn-copy-pix');
+    btn.textContent = 'Copiado!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Copiar';
+      btn.classList.remove('copied');
+    }, 2500);
+  }).catch(() => {
+    // fallback
+    const ta = document.createElement('textarea');
+    ta.value = code;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  });
+}
+</script>
+
+<!-- ═══════════════ POPUP CUPOM ═══════════════ -->
+<div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-label="Oferta exclusiva">
+  <div class="popup-box">
+    <div class="popup-stripe"></div>
+    <button class="popup-close-btn" onclick="closePopup()" aria-label="Fechar">✕</button>
+    <div class="popup-body">
+      <div class="popup-icon-wrap">
+        <svg class="svg-icon" aria-hidden="true"><use href="#i-gift"/></svg>
+      </div>
+      <div class="popup-tag-pill">Só pra você</div>
+      <h2 class="popup-title">Ganhe <em>20% off</em><br>no seu pedido!</h2>
+      <p class="popup-sub">Criamos um cupom exclusivo para quem está conhecendo a Eternize agora. Use antes de finalizar e economize na sua peça personalizada.</p>
+      <div class="popup-live-row">
+        <span class="dot-green"></span>
+        <span>Cupom disponível agora</span>
+      </div>
+      <div class="popup-coupon-box" onclick="copyCoupon()" title="Clique para copiar">
+        <div class="popup-coupon-label">Seu cupom de desconto</div>
+        <div class="popup-coupon-code" id="popup-code">ETRNZ20</div>
+        <div class="popup-coupon-hint" id="popup-hint">Clique para copiar o código</div>
+      </div>
+      <button class="popup-cta-btn" onclick="closePopupAndOpen()">Usar agora e personalizar meu colar</button>
+      <button class="popup-dismiss" onclick="closePopup()">Agora não, obrigado</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
