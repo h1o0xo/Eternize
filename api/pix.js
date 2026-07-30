@@ -150,8 +150,8 @@ export default async function handler(req, res) {
     identifier,
     amount,
     pix: {
-      code:  pixCode,
-      image: pixImage,
+      code:  data.pix?.code || null,
+      image: null
     },
   });
 }
