@@ -2660,20 +2660,21 @@ async function submitOrder() {
       return;
     }
 
-    // Show PIX
+    // Show PIX corrigido
     const qrImg = document.getElementById('pix-qr-img');
-    const qrPh  = document.getElementById('pix-qr-placeholder');
+    const qrPh = document.getElementById('pix-qr-placeholder');
+    
     if (data.pix?.image) {
-      qrImg.src = data.pix.image.startsWith('data:') ? data.pix.image : `data:image/png;base64,${data.pix.image}`;
+      qrImg.src = data.pix.image;
       qrImg.style.display = 'block';
-      qrPh.style.display  = 'none';
+      if (qrPh) qrPh.style.display = 'none';
     } else {
-      qrPh.textContent = 'QR Code indisponível — use o código abaixo';
+      if (qrPh) qrPh.textContent = 'QR Code indisponível — use o código abaixo';
     }
 
-    document.getElementById('pix-code').textContent = data.pix?.code || '—';
+    document.getElementById('pix-code').textContent = data.pix?.code || '-';
     goToStep('pix');
-
+    
   } catch (err) {
     console.error('[submit]', err);
     document.getElementById('error-msg').textContent =
