@@ -2660,7 +2660,7 @@ async function submitOrder() {
       return;
     }
 
-    // Show PIX direto e definitivo
+   // Show PIX direto e definitivo
     const qrImg = document.getElementById('pix-qr-img');
     const qrPh = document.getElementById('pix-qr-placeholder');
     
@@ -2675,7 +2675,10 @@ async function submitOrder() {
       document.getElementById('pix-code').textContent = pixCode;
       goToStep('pix');
     } else {
-      if (qrPh) qrPh.textContent = 'Erro ao carregar QR Code';
+      if (qrPh) {
+        qrPh.style.display = 'block';
+        qrPh.textContent = 'Erro ao carregar QR Code';
+      }
       document.getElementById('pix-code').textContent = 'Erro ao gerar código Pix';
       goToStep('pix');
     }
