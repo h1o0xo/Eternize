@@ -7,7 +7,7 @@
  */
 
 const SIGILOPAY_ENDPOINT = 'https://app.sigilopay.com.br/api/v1/gateway/pix/receive';
-const UNIT_PRICE = 97.00;
+const UNIT_PRICE = 67.00;
 
 // ── Produto ───────────────────────────────────────────────────────────────────
 const PRODUCT_ID   = 'colar-eternize-personalizado';
